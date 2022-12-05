@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Propriétés du conteneur principal: la bibliothèque*/
+#conteneur {
+    background-color: #501515;
+    width: 400px;
+    height: 700px;
+    margin: 100px auto;
+}
+
+/*Propriétés des étagères - conteneurs flex*/
+#conteneur .etagere {
+    background-color: #501515;
+    border: 8px solid #802020;
+    width: 384px;
+    height: 100px;
+
+    /*Propriétés de base de la majorité des conteneurs flex*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+}
+
+#conteneur .etagere:nth-child(2){
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#conteneur .etagere:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#conteneur .etagere4{
+    background-color: #501515;
+    border: 8px solid #802020;
+    width: 384px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+#conteneur .etagere4 :nth-child(even){
+    order:1;
+}
+
+#conteneur .etagere:nth-child(5){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#conteneur .etagere:nth-child(6){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+/*Propriétés des livres*/
+.livre {
+    background-color: #fce171;
+    color: #501515;
+    text-align: center;
+    font: bold 14px Arial;
+    border: 2px solid #818106;
+}
+
+.vertical {
+    width: 5%;
+    height: 75%;
+}
+
+.etagere:nth-child(2) .vertical:nth-child(even){
+    width: 10%;
+}
+
+.etagere:nth-child(3) .vertical:nth-child(5){
+    order: 1;
+}
+
+
+
+.horizontal {
+    width: 40%;
+    height: 15%;
+    text-align: left;
+    padding-left: 1%;
+}
+
+
+/*Variantes selon les étagères*/
